@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #E85274;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    width: 100%;
+    padding
+    height: 4em;
+    box-shadow: 0 .35em 0 #E04565;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

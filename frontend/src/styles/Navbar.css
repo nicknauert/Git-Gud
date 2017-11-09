@@ -2,12 +2,29 @@
     background-color: #E85274;
     color: white;
     font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: .03em;
     width: 100%;
-    padding
-    height: 4em;
+    padding: .5em 2em;
     box-shadow: 0 .35em 0 #E04565;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.pageToggle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggleGraphic {
+    background-color: #3A5D82;
+    border-radius: 50%;
+    height: .75em;
+    width: .75em;
+    margin: 0 .5em;
 }

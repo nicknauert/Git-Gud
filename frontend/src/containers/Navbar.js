@@ -12,8 +12,14 @@ class Navbar extends Component {
     return (
       <div className="navbar">
           <p>GG</p>
-          <p>DASH</p>
-          <p>ACHIEVEMENTS</p>
+          <div className="pageToggle">
+            <p>DASH</p>
+            <div className="toggleGraphic">
+                
+            </div>
+            <p>ACHIEVEMENTS</p>
+          </div>
+          
           <p>LOGOUT</p>
       </div>
     );

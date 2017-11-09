@@ -6,7 +6,8 @@ import {
 
 export function getUserService( user ) {
     return dispatch => {
-        axios.get('/users/' + user).then( res => {
+        axios.get('http://localhost:4000/users/' + user).then( res => {
+            console.log("Dispatching post-thunk");
             dispatch(getUser(res.data))
         })
     }

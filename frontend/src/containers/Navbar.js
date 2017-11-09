@@ -13,20 +13,15 @@ class Navbar extends Component {
       <div className="navbar">
           <p>GG</p>
           <div className="pageToggle">
-            <p>DASH</p>
-            <div className="toggleGraphic">
-                
-            </div>
-            <p>ACHIEVEMENTS</p>
+            <p className="">DASH</p>
+            <div className="toggleGraphic"></div>
+            <p className="fade">ACHIEVEMENTS</p>
           </div>
-          
           <p>LOGOUT</p>
       </div>
     );
   }
 }
-
-
 
 
 function mapStateToProps(state) {

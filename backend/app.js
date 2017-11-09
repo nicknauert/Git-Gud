@@ -1,13 +1,15 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
-let axios = require('axios');
+const express = require('express');
+const path = require('path');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+const cors = require('cors');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(cors());
 
 
 /////////////////////////

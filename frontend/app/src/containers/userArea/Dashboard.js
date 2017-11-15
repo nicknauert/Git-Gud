@@ -4,6 +4,7 @@ import {
     getUserService
   } from "../../services.js";
 import UserCard from '../../components/dashboard/UserCard'
+import "../../styles/Dashboard.css"
 import axios from 'axios';
 
 class Dashboard extends Component {
@@ -17,7 +18,7 @@ class Dashboard extends Component {
     render() {
         return (
         <div className="dashBoard">
-            {/* <UserCard /> */}
+            <UserCard />
         </div>
         );
     }

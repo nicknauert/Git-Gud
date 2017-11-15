@@ -1,5 +1,6 @@
 import {
-    GET_USER
+    GET_USER,
+    TOGGLE_PAGE
 } from "../constants.js"
 
 const makeActionCreator = function(actionType){
@@ -12,3 +13,4 @@ const makeActionCreator = function(actionType){
 };
 
 export const getUser = makeActionCreator(GET_USER);
+export const togglePage = makeActionCreator(TOGGLE_PAGE);

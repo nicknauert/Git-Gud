@@ -1,0 +1,19 @@
+.dashBoard {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.userCard {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 2em 1em;
+    background-image: linear-gradient(-45deg, #E85274, rgb(243, 122, 172))
+}
+
+.userCard span:first-child {
+    font-size: 1.5em;
+}

@@ -5,12 +5,17 @@ const bodyParser = require('body-parser');
 const axios = require('axios');
 const cors = require('cors');
 
+const { 
+  getUser,
+  getUsersRepos,
+  getAllUserData
+} = require('./helpers.js') 
+
 const app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(cors());
-
 
 /////////////////////////
 // ROUTES
@@ -19,19 +24,10 @@ app.use(cors());
 ////// USER ROUTES
 
 // Get a single user
-app.get("/users/:user", (req, res) => {
-  axios.get("https://api.github.com/users/" + req.params.user)
-    .then( gitRes => {
-      res.send(gitRes.data)
-    })
-});
-
-// Get a users repos
-app.get("/users/:user/repos", (req, res) => {
-  axios.get("https://api.github.com/users/" + req.params.user + "/repos?per_page=100")
-    .then( gitRes => {
-      res.send(gitRes.data)
-    })
+app.get("/users/:user", async (req, res) => {
+  const userData = await getAllUserData(req.params.user)
+  console.log("App.js >> ", userData);
+  res.send(userData);
 });
 
 // Get a users orgs

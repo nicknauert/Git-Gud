@@ -1,13 +1,13 @@
 import React from 'react';
 
-const UserCard = () => {
-
+const UserCard = (props) => {
     return (
         <div className="userCard">
-            <span>Nick Nauert</span>
-            <span>325 Commits</span>
-            <span>150 Pushes</span>
-            <span>60 Repos</span>
+        { 
+            //(props !== undefined)
+            //? `<span>${props.user.name}</span><span>${props.repos.length}</span>`
+            //: null
+        }
         </div>
     )
 

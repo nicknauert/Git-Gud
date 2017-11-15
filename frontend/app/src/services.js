@@ -7,8 +7,11 @@ import {
 export function getUserService( user ) {
     return dispatch => {
         axios.get('http://localhost:4000/users/' + user).then( res => {
-            console.log(res.data);
             dispatch(getUser(res.data))
         })
     }
+}
+
+export function countUserRepos(user) {
+
 }

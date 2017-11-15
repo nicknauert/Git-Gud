@@ -1,24 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import {
-    getUserService
-  } from "../../services.js";
 import UserCard from '../../components/dashboard/UserCard'
 import "../../styles/Dashboard.css"
 import axios from 'axios';
 
 class Dashboard extends Component {
-    componentDidMount(){
-        this.props.getUser('nicknauert');
-    }
-    componentDidRecieveProps(){
-        console.log(this.props);
-    }
 
     render() {
         return (
         <div className="dashBoard">
-            <UserCard />
+            <UserCard {...this.props.user}/>
         </div>
         );
     }
@@ -32,7 +23,7 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getUser: (user) => dispatch(getUserService(user))
+        //getUser: (user) => dispatch(getUserService(user))
     }
 }
 

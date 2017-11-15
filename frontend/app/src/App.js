@@ -6,8 +6,17 @@ import './styles/App.css';
 import Dashboard from './containers/userArea/Dashboard.js';
 import UserAchievements from './containers/userArea/UserAchievements.js';
 import Navbar from './containers/Navbar.js';
+import {
+  getUserService
+} from "./services.js";
 
 class App extends Component {
+  componentWillMount(){
+    this.props.getUser('nicknauert');
+  }
+  componentDidRecieveProps(){
+      console.log(this.props);
+  }
   render() {
 
     const _handlePageToggle = (bool) => {
@@ -34,7 +43,9 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = dispatch => {
-
+  return {
+    getUser: (user) => dispatch(getUserService(user))
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
